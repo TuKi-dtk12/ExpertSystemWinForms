@@ -1,52 +1,52 @@
-# Hệ Chuyên Gia Chẩn Đoán Bệnh - WinForms
+# Expert System for Disease Diagnosis - WinForms
 
-Ứng dụng chẩn đoán bệnh thông minh dựa trên triệu chứng, được chuyển đổi từ React sang WinForms C#.
+An intelligent disease diagnosis application based on symptoms, converted from React to WinForms C#.
 
-## Tính năng
+## Features
 
-1. **Chẩn Đoán Bệnh**
-   - Chọn triệu chứng (Forward Chaining)
-   - Tính toán Certainty Factor (CF)
-   - Suy diễn lùi (Backward Chaining) để tăng độ chính xác
-   - Hiển thị kết quả với độ tin cậy
+1. **Disease Diagnosis**
+   - Symptom Selection (Forward Chaining)
+   - Certainty Factor (CF) Calculation
+   - Backward Chaining for improved accuracy
+   - Display results with confidence scores
 
-2. **Quản Lý Cơ Sở Tri Thức**
-   - Thêm, sửa, xóa triệu chứng
-   - Thêm, sửa, xóa bệnh
-   - Gán Certainty Factor cho từng triệu chứng
+2. **Knowledge Base Management**
+   - Add, edit, and delete symptoms
+   - Add, edit, and delete diseases
+   - Assign Certainty Factor for each symptom
 
-3. **Lịch Sử Chẩn Đoán**
-   - Xem lại các lần chẩn đoán trước
-   - Xem chi tiết kết quả
-   - Xóa lịch sử
+3. **Diagnosis History**
+   - Review previous diagnoses
+   - View detailed results
+   - Delete history records
 
-## Công nghệ
+## Technology
 
 - .NET 8.0
 - Windows Forms
-- Newtonsoft.Json (lưu trữ dữ liệu)
+- Newtonsoft.Json (data storage)
 
-## Yêu cầu hệ thống
+## System Requirements
 
-- Windows 10 trở lên
+- Windows 10 or higher
 - .NET 8.0 Runtime
 
-## Cài đặt và chạy
+## Installation and Usage
 
-1. Mở project trong Visual Studio hoặc JetBrains Rider
-2. Build project: `dotnet build`
-3. Chạy ứng dụng: `dotnet run` hoặc F5 trong Visual Studio
+1. Open the project in Visual Studio or JetBrains Rider
+2. Build the project: `dotnet build`
+3. Run the application: `dotnet run` or F5 in Visual Studio
 
-## Cấu trúc dự án
+## Project Structure
 
 ```
 ExpertSystemWinForms/
-├── Models/              # Các model dữ liệu
+├── Models/              # Data models
 │   ├── Symptom.cs
 │   ├── Disease.cs
 │   ├── DiagnosisRecord.cs
 │   └── DiagnosisResult.cs
-├── Forms/               # Các form
+├── Forms/               # UI Forms
 │   ├── DiagnosisForm.cs
 │   ├── BackwardChainingForm.cs
 │   ├── KnowledgeBaseForm.cs
@@ -54,22 +54,22 @@ ExpertSystemWinForms/
 │   ├── SymptomEditForm.cs
 │   └── DiseaseEditForm.cs
 ├── Services/            # Services
-│   └── DataService.cs   # Quản lý lưu trữ dữ liệu
+│   └── DataService.cs   # Data storage management
 ├── Utils/               # Utilities
 │   └── CertaintyFactor.cs
-├── MainForm.cs          # Form chính
+├── MainForm.cs          # Main form
 └── Program.cs           # Entry point
 ```
 
-## Dữ liệu
+## Data
 
-Dữ liệu được lưu trong thư mục AppData của người dùng:
+Data is stored in the user's AppData folder:
 - `%AppData%\ExpertSystemWinForms\symptoms.json`
 - `%AppData%\ExpertSystemWinForms\diseases.json`
 - `%AppData%\ExpertSystemWinForms\history.json`
 
-## Lưu ý
+## Notes
 
-- Kết quả chẩn đoán chỉ mang tính chất tham khảo
-- Cần đến cơ sở y tế để được bác sĩ thăm khám chính xác
+- Diagnosis results are for reference purposes only
+- Please visit a medical facility for accurate diagnosis by a doctor
 
